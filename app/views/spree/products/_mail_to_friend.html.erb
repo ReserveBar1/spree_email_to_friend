@@ -1,0 +1,104 @@
+<div style="background-color:#FAFAFA;padding:0;margin:0;">
+<table width="600" cellspacing="0" cellpadding="0" border="0" align="center" style="border: 1px solid #DDDDDD;background-color:#FFF;">
+	<tbody>
+		<tr>
+    	<td valign="top" align="center" style="padding:20px 0;"><img src="http://<%= Spree::Config[:site_url] %>/assets/logo.png"></td>
+    </tr>
+		<tr>
+    	<td valign="top" align="center">
+        <table width="600" cellspacing="0" cellpadding="0" border="0" id="templateBody">
+          <tbody>
+		        <tr>
+							<td valign="top" style="background-color:#FFFFFF;">
+								<table width="100%" cellspacing="0" cellpadding="20" border="0">
+								<tbody><tr>
+								<td valign="top">
+								<div style="color:#505050;font-family:Georgia, Times, 'Times New Roman', serif;font-size:14px;line-height:130%;text-align:left;">
+								<%= mail.sender_name %> has requested that we send you this email.
+								<br>
+								<br>
+								<cite style="background-color:#F8F0B0;padding:10px;display:block;position:relative;">
+								<p>Hi <%= mail.recipient_name %></p>
+								<% unless mail.message.blank? -%>
+								<p><%= mail.message %></p>
+								<% end -%>
+								<p><%= mail.sender_name %></p>
+								</cite>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+        
+        <table width="100%" cellspacing="0" cellpadding="20" border="0" mc:variant="content with right image" style="border-top:1px solid #eee;border-bottom:1px solid #eee;">
+        	<tbody>
+        		<tr>
+            	<td valign="top">
+              	<div style="color:#505050;font-family:Georgia, Times, 'Times New Roman', serif;font-size:14px;line-height:130%;text-align:left;">
+                   <h4 style="color:#202020;font-family:Arial;font-size:22px;font-weight:bold;margin:0 0 10px;text-align:left;">
+                   	<%= product.name %>
+                   </h4>
+                      <%= truncate(product.description, :length => 600) %>
+                      <strong><a target='_blank' href="<%= spree.product_url(product) %>">Read More</a></strong>
+                      <br>
+                    </div>
+                    <table cellspacing="0" cellpadding="10" border="0" align="right" style="border:0;background-color: #B1291D;border-collapse:separate !important;-webkit-box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4);-khtml-box-shadow: inset 0 2px 0 rgba(255,255,255,0.4);-moz-box-shadow: inset 0 2px 0 rgba(255,255,255,0.4);-o-box-shadow: inset 0 2px 0 rgba(255,255,255,0.4);box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4);">
+                    	<tbody>
+                    		<tr>
+                        	<td valign="center">
+                          	<div><a target="_blank" href="http://www.reservebar.com/" style="color:#FFFFFF !important;font-size:15px;font-weight:normal;letter-spacing:-.5px;line-height:100%;text-align:center;text-decoration:none !important;font-family:Georgia, Times, 'Times New Roman', serif;">Learn More</a></div>
+                          </td>
+                        </tr>
+                    	</tbody>
+                    </table>
+                </td>
+                <td valign="top" align="center">
+                  <% unless product.images.empty? %>
+									<a target='_blank' href="<%= spree.product_url(product) %>"><img style="max-width:250px;display:inline;height:auto;" src="http://<%= Spree::Config[:site_url] %><%= product.images.first.attachment.url(:product) %>"></a>
+									<% end %>
+                </td>
+            </tr>
+        </tbody>
+      </table>
+			
+				<table width="100%" cellspacing="0" cellpadding="20" border="0">
+					<tbody><tr>
+					<td valign="top">
+						<div style="color:#505050;font-familbackground-color:#FAFAFA;y:Georgia, Times, 'Times New Roman', serif;font-size:14px;line-height:130%;text-align:left;">
+							We look forward to serving you and exceeding your expectations every time here at ReserveBar.com.
+							<br><br>Gratefully yours,<br>ReserveBar.com<br>Good Spirits. Delivered.<br>
+						</div>
+					</td>
+					</tr>
+					</tbody>
+				</table>
+				</td>
+				</tr>
+				</tbody>
+			</table>
+      </td>
+    </tr>
+	<tr>
+		<td valign="top" align="center" style="background-color:#FAFAFA;text-align:center;">
+	  	<table width="600" cellspacing="0" cellpadding="10" border="0">
+      	<tbody><tr>
+          	<td valign="top">
+              <table width="100%" cellspacing="0" cellpadding="10" border="0">
+                  <tbody><tr>
+                    <td valign="middle">
+                      <div style="color:#707070;font-family:Arial;font-size:12px;line-height:125%;text-align:center;">
+                        <a href="*|TWITTER:PROFILEURL|*" style="color:#336699;">follow on Twitter</a> | <a href="*|FACEBOOK:PROFILEURL|*" style="color:#336699;">friend on Facebook</a> | <a href="*|FORWARD|*" style="color:#336699;">forward to a friend</a>
+                      </div>
+                    </td>
+                  </tr>
+              	</tbody>
+              </table>
+            </td>
+          </tr>
+	      </tbody>
+	    </table>
+		</td>
+	</tr>
+</tbody>
+</table>
+</div>

@@ -1,5 +1,6 @@
 class Spree::ToFriendMailer < ActionMailer::Base
-  default :from => Spree::MailMethod.current.preferred_mails_from
+  default :from => "ReserveBar Concierge<no-reply@reservebar.com>"
+  default :reply_to => "ReserveBar Concierge<concierge@reservebar.com>"
 
   def mail_to_friend(object, mail)
     @object = object
@@ -14,7 +15,7 @@ class Spree::ToFriendMailer < ActionMailer::Base
     end
     default_url_options[:host] = mail.host
     opts[:subject] =  mail.subject
-    opts[:reply_to] = mail.sender_email
+    #opts[:reply_to] = mail.sender_email
 
     mail(opts)
   end
