@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_email_to_friend'
-  s.version     = '1.2.1'
+  s.version     = '1.2.2'
   s.summary     = 'Spree extension to send product recommendations to friends'
   s.description = 'Spree extension to send product recommendations to friends'
   s.required_ruby_version = '>= 1.8.7'

@@ -34,11 +34,11 @@
         	<tbody>
         		<tr>
             	<td valign="top">
-              	<div style="color:#505050;font-family:Georgia, Times, 'Times New Roman', serif;font-size:14px;line-height:130%;text-align:left;">
+              	<div style="color:#505050;font-family:Georgia, Times, 'Times New Roman', serif;font-size:14px;line-height:130%;text-align:left;margin-bottom:5px;">
                    <h4 style="color:#202020;font-family:Arial;font-size:22px;font-weight:bold;margin:0 0 10px;text-align:left;">
-                   	<%= product.name %>
+                   	<a target='_blank' style="color:#202020;text-decoration:none;" href="<%= spree.product_url(product) %>"><%= product.name %></a>
                    </h4>
-                      <%= truncate(product.description, :length => 600) %>
+                      <a target='_blank' style="color:#505050;text-decoration:none;" href="<%= spree.product_url(product) %>"><%= truncate(product.description, :length => 600) %></a>
                       <strong><a target='_blank' href="<%= spree.product_url(product) %>">Read More</a></strong>
                       <br>
                     </div>
